@@ -8,11 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      keyframes: {
+        fullSpin: {
+          '100%' : { transform: "rotate(-360deg)" }
+        }
       },
+      animation: {
+        fullSpin: "fullSpin 3s linear infinite"
+      },
+      backgroundImage: {
+        'gradient-radial': 'conic-gradient(grey 20deg, transparent 120deg)',
+      },
+      boxShadow: {
+        'cust': '0 0 30px 15px rgba(0, 0, 0, 0.3)',
+      }
     },
   },
   plugins: [],
