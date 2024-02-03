@@ -1,7 +1,7 @@
-import { Inter } from 'next/font/google';
+import { Roboto_Mono } from 'next/font/google';
 import { useState } from 'react';
 
-const inter = Inter({ subsets: ['latin'] });
+const font = Roboto_Mono({ subsets: ['latin'] });
 
 const winningLines = [
   [0, 1, 2],
@@ -40,7 +40,7 @@ export default function Home() {
     setCurrentPlayer(nextPlayer);
   }
 
-  function checkWinner(player) {
+  function checkWinner(player: string) {
     for (let line of winningLines) {
       if (line.every(index => board[index] === player)) {
         return true;
@@ -56,7 +56,7 @@ export default function Home() {
 
 
   return (
-    <main className={`${inter.className} h-screen bg-teal-950`}>
+    <main className={`${font.className} h-screen bg-teal-950`}>
       <div className="flex justify-center pt-24 font-mono text-7xl text-neutral-300">
         Tic-Tac-Toe
       </div>
@@ -69,9 +69,9 @@ export default function Home() {
                 key={index}
                 className={`tile ${
                   value === 'X'
-                    ? 'text-red-500 font-bold'
+                    ? 'text-red-500 font-bold justify-center'
                     : value === 'O'
-                    ? 'text-blue-500 font-bold'
+                    ? 'text-blue-500 font-bold justify-center'
                     : ''
                 }`}
                 onClick={() => handleClick(index)}
