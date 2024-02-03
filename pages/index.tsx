@@ -32,7 +32,7 @@ export default function Home() {
     // Check if the current player has won
     if (checkWinner(currentPlayer)) {
       alert(`${currentPlayer} has won!`);
-      // Here you could also stop the game or set up the board for a new game
+      // TODO: also stop the game or set up the board for a new game
     }
   
     // Switch the current player
