@@ -29,6 +29,13 @@
   }
   .tile{
     @apply
-    border p-6 hover:bg-blue-400/20
+    border p-6 hover:bg-blue-500/0
+  }
+  .winning-tile {
+    @apply bg-emerald-500/40; 
+  }
+  
+  .disabled-tile {
+    @apply cursor-not-allowed;
   }
 }
