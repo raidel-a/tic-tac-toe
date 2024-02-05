@@ -127,7 +127,7 @@ export default function Home() {
           </div>
           <div className="justify-self-center">
             <button
-              className={`rounded-md border-none ${oswald.className} bg-yellow-600/80 p-3 text-3xl font-medium text-neutral-300/90 shadow-[0_8px_0_0px_rgba(0,0,0,0.3)] transition hover:text-white active:translate-y-2 active:scale-95 active:shadow-none`}
+              className={`rounded-md border-none ${oswald.className} bg-yellow-600 p-3 text-3xl font-medium text-neutral-300/90 shadow-[0_8px_0_0px_rgba(0,0,0,1)] transition hover:text-white active:translate-y-2 active:scale-95 active:shadow-none`}
               onClick={resetGame}
             >
               Reset
