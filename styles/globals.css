@@ -39,17 +39,17 @@
 
 @keyframes typewriter {
   0% { width: 0; text-decoration: none; }
-  100% { width: 100%; text-decoration: none; }
+  100% { width: 90%; text-decoration: none; }
 }
 @keyframes remove-border {
-  0%,99% { border-right: .15em solid orange; }
-  100% { border-right: none; }
+  0%,99% { border-right: .15em solid orange; overflow:hidden }
+  100% { border-right: none; overflow:visible; }
 }
 
-@keyframes show-overflow {
+/* @keyframes show-overflow {
   0%,99% { overflow: hidden; }
   100% { overflow: visible; }
-}
+} */
 
 .typewriter {
   overflow: hidden;
@@ -58,7 +58,7 @@
   margin: 0 auto;
   letter-spacing: .15em; /* adjust as needed */
   animation: 
-    typewriter 2s steps(40, end), 
-    remove-border 0ms linear 2000ms forwards, 
-    show-overflow 0ms linear 2200ms forwards;
+    typewriter 2s steps(20, end), 
+    remove-border 0ms linear 2000ms forwards;
+    /* show-overflow 0ms linear 2200ms forwards; */
 }
