@@ -66,20 +66,20 @@ export default function Home() {
 
   return (
     <main
-      className={`${robotoSlab.className} flex min-h-screen justify-center bg-teal-950`}
+      className={`${robotoSlab.className} min-w-screen flex min-h-screen justify-center bg-teal-950`}
     >
       <div className="grid items-center">
         <div className="flex flex-col items-center space-y-10">
           <h1
-            className={`typewriter font-semibold underline drop-shadow-[0_-4px_1px_rgba(0,0,0,0.4)] ${
+            className={`typewriter font-semibold underline drop-shadow-[0_-4px_1px_rgba(0,0,0,0.4)] text-5xl md:text-7xl text-neutral-400 decoration-yellow-600 underline-offset-8 ${
               gameOver ? 'decoration-solid' : 'decoration-dashed'
-            } text-7xl text-neutral-400 decoration-yellow-600 underline-offset-8`}
+            } `}
           >
             Tic-Tac-Toe
           </h1>
           {!gameOver ? (
             <div
-              className={`text-4xl ${oswald.className} font-semibold drop-shadow-[0_0_2px_rgba(255,255,255,0.2)]`}
+              className={`text-4xl ${oswald.className} font-semibold text-neutral-400/70 drop-shadow-[0_0_2px_rgba(0,0,0,1)]`}
             >
               Current Player: &nbsp;
               <span
@@ -92,13 +92,13 @@ export default function Home() {
             </div>
           ) : (
             <div
-              className={`text-4xl ${oswald.className} font-semibold drop-shadow-[0_0_2px_rgba(255,255,255,0.2)]`}
+              className={`text-4xl ${oswald.className} font-semibold text-neutral-400/70 drop-shadow-[0_0_2px_rgba(0,0,0,1)]`}
             >
               {message}
             </div>
           )}
 
-          <div className="box shadow-cust relative h-[450px] w-[450px] overflow-hidden bg-lime-950/10">
+          <div className="box shadow-cust relative h-96 w-96 overflow-hidden bg-lime-950/10">
             <div className="relative z-10 m-3 grid h-[94%] w-[94%] grid-cols-3 grid-rows-3 gap-1 p-2">
               {board.map((value, index) => (
                 <div
