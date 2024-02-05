@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { oswald, robotoSlab } from '../styles/fonts';
+import { figtree, oswald, robotoSlab } from '../styles/fonts';
 
 // const font = firaCode;
 
@@ -71,7 +71,7 @@ export default function Home() {
       <div className="grid items-center">
         <div className="flex flex-col items-center space-y-10">
           <h1
-            className={`typewriter font-semibold underline drop-shadow-[0_-4px_1px_rgba(0,0,0,0.4)] text-5xl md:text-7xl text-neutral-400 decoration-yellow-600 underline-offset-8 ${
+            className={`typewriter text-5xl font-semibold text-neutral-400 underline decoration-yellow-600 underline-offset-8 drop-shadow-[0_-4px_1px_rgba(0,0,0,0.4)] md:text-7xl ${
               gameOver ? 'decoration-solid' : 'decoration-dashed'
             } `}
           >
@@ -79,7 +79,7 @@ export default function Home() {
           </h1>
           {!gameOver ? (
             <div
-              className={`text-4xl ${oswald.className} font-semibold text-neutral-400/70 drop-shadow-[0_0_2px_rgba(0,0,0,1)]`}
+              className={`text-3xl ${figtree.className} font-semibold text-neutral-400/70 drop-shadow-[0_0_2px_rgba(0,0,0,1)]`}
             >
               Current Player: &nbsp;
               <span
@@ -92,7 +92,7 @@ export default function Home() {
             </div>
           ) : (
             <div
-              className={`text-4xl ${oswald.className} font-semibold text-neutral-400/70 drop-shadow-[0_0_2px_rgba(0,0,0,1)]`}
+              className={`text-3xl ${figtree.className} font-semibold text-neutral-400/70 drop-shadow-[0_0_2px_rgba(0,0,0,1)]`}
             >
               {message}
             </div>
@@ -127,7 +127,7 @@ export default function Home() {
           </div>
           <div className="justify-self-center">
             <button
-              className={`rounded-md border-none ${oswald.className}  bg-yellow-600/80 p-3 text-3xl text-neutral-300/90 shadow-[0_8px_0_0px_rgba(0,0,0,0.3)] transition hover:text-white active:translate-y-2 active:scale-95 active:shadow-none`}
+              className={`rounded-md border-none ${oswald.className} bg-yellow-600/80 p-3 text-3xl font-medium text-neutral-300/90 shadow-[0_8px_0_0px_rgba(0,0,0,0.3)] transition hover:text-white active:translate-y-2 active:scale-95 active:shadow-none`}
               onClick={resetGame}
             >
               Reset
