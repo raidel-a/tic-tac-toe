@@ -71,7 +71,7 @@ export default function Home() {
       <div className="grid items-center">
         <div className="flex flex-col items-center space-y-10">
           <h1
-            className={`typewriter text-5xl font-semibold text-neutral-400 underline decoration-yellow-600 underline-offset-8 drop-shadow-[0_-4px_1px_rgba(0,0,0,0.4)] md:text-7xl ${
+            className={`typewriter text-5xl font-semibold text-neutral-100/70 underline decoration-yellow-600 underline-offset-8 drop-shadow-[0_-4px_1px_rgba(0,0,0,0.4)] md:text-7xl ${
               gameOver ? 'decoration-solid' : 'decoration-dashed'
             } `}
           >
@@ -79,7 +79,7 @@ export default function Home() {
           </h1>
           {!gameOver ? (
             <div
-              className={`text-3xl ${figtree.className} font-semibold text-neutral-400/70 drop-shadow-[0_0_2px_rgba(0,0,0,1)]`}
+              className={`text-3xl ${figtree.className} font-semibold text-neutral-300/70 drop-shadow-[0_0_2px_rgba(0,0,0,1)]`}
             >
               Current Player: &nbsp;
               <span
@@ -92,7 +92,7 @@ export default function Home() {
             </div>
           ) : (
             <div
-              className={`text-3xl ${figtree.className} font-semibold text-neutral-400/70 drop-shadow-[0_0_2px_rgba(0,0,0,1)]`}
+              className={`text-3xl ${figtree.className} font-semibold text-neutral-300/70 drop-shadow-[0_0_2px_rgba(0,0,0,1)]`}
             >
               {message}
             </div>
