@@ -36,3 +36,29 @@
     @apply cursor-not-allowed;
   }
 }
+
+@keyframes typewriter {
+  0% { width: 0; text-decoration: none; }
+  100% { width: 100%; text-decoration: none; }
+}
+@keyframes remove-border {
+  0%,99% { border-right: .15em solid orange; }
+  100% { border-right: none; }
+}
+
+@keyframes show-overflow {
+  0%,99% { overflow: hidden; }
+  100% { overflow: visible; }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid orange; /* adjust as needed */
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em; /* adjust as needed */
+  animation: 
+    typewriter 2s steps(40, end), 
+    remove-border 0ms linear 2000ms forwards, 
+    show-overflow 0ms linear 2200ms forwards;
+}

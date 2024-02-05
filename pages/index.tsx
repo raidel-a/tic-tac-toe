@@ -1,8 +1,7 @@
-import { Oswald } from 'next/font/google';
-
 import { useState } from 'react';
+import { oswald, robotoSlab } from '../styles/fonts';
 
-const font = Oswald({ subsets: ['latin'] });
+// const font = firaCode;
 
 const winningLines = [
   [0, 1, 2],
@@ -67,19 +66,21 @@ export default function Home() {
 
   return (
     <main
-      className={`${font.className} flex min-h-screen justify-center bg-teal-950`}
+      className={`${robotoSlab.className} flex min-h-screen justify-center bg-teal-950`}
     >
       <div className="grid items-center">
         <div className="flex flex-col items-center space-y-10">
           <h1
-            className={`font-semibold underline ${
+            className={`typewriter font-semibold underline drop-shadow-[0_-4px_1px_rgba(0,0,0,0.4)] ${
               gameOver ? 'decoration-solid' : 'decoration-dashed'
-            } text-8xl text-neutral-400 decoration-yellow-600 underline-offset-8`}
+            } text-7xl text-neutral-400 decoration-yellow-600 underline-offset-8`}
           >
             Tic-Tac-Toe
           </h1>
           {!gameOver ? (
-            <div className="text-5xl drop-shadow-lg ">
+            <div
+              className={`text-4xl ${oswald.className} font-semibold drop-shadow-[0_0_2px_rgba(255,255,255,0.2)]`}
+            >
               Current Player: &nbsp;
               <span
                 className={`font-black 
@@ -90,7 +91,11 @@ export default function Home() {
               </span>
             </div>
           ) : (
-            <div className="text-5xl">{message}</div>
+            <div
+              className={`text-5xl ${oswald.className} font-medium drop-shadow-[0_0_2px_rgba(255,255,255,0.2)]`}
+            >
+              {message}
+            </div>
           )}
 
           <div className="box shadow-cust relative h-[450px] w-[450px] overflow-hidden bg-lime-950/10">
@@ -104,9 +109,9 @@ export default function Home() {
                       : 'tile hover:scale-95 active:scale-90'
                   } ${winningIndices.includes(index) ? 'winning-tile' : ''} ${
                     value === 'X'
-                      ? 'flex items-center justify-center text-6xl font-black text-red-900'
+                      ? 'flex items-center justify-center text-6xl font-black text-red-800/90'
                       : value === 'O'
-                        ? 'flex items-center justify-center text-6xl font-black text-blue-900'
+                        ? 'flex items-center justify-center text-6xl font-black text-blue-800/90'
                         : ''
                   }`}
                   onClick={() => {
@@ -122,7 +127,7 @@ export default function Home() {
           </div>
           <div className="justify-self-center">
             <button
-              className="rounded-md border-none bg-neutral-900 p-3 text-3xl text-white/70 shadow-[0_8px_0_0px_rgba(0,0,0,0.3)] transition hover:text-white active:translate-y-2 active:shadow-none"
+              className={`rounded-md border-none ${oswald.className}  bg-yellow-600/80 p-3 text-3xl text-neutral-300/90 shadow-[0_8px_0_0px_rgba(0,0,0,0.3)] transition hover:text-white active:translate-y-2 active:scale-95 active:shadow-none`}
               onClick={resetGame}
             >
               Reset

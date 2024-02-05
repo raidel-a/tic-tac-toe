@@ -20,7 +20,7 @@ const config: Config = {
         'gradient-radial': 'conic-gradient(grey 20deg, transparent 120deg)',
       },
       boxShadow: {
-        'cust': '0 0 30px 15px rgba(0, 0, 0, 0.3)',
+        'cust': '0 0 40px 25px rgba(0, 0, 0, 0.3)',
       }
     },
   },
