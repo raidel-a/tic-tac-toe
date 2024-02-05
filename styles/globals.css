@@ -4,37 +4,34 @@
 
 @layer utilities {
   .box::before {
-    @apply 
-    content-[''] 
-    absolute 
-    bg-gradient-radial
-    w-[800px]
-    h-[800px]
-    top-[-50%]
+    @apply bg-gradient-radial 
+    animate-fullSpin 
+    absolute
     left-[-50%]
-    animate-fullSpin;
+    top-[-50%]
+    h-[800px]
+    w-[800px]
+    content-[''];
   }
   .box::after {
-    @apply 
-    content-[''] 
-    w-[96%]
-    h-[96%]
-    bg-black
-    absolute
-    top-[2%]
+    @apply absolute 
     left-[2%]
-    flex 
-    justify-center
-    items-center;
+    top-[2%]
+    flex
+    h-[96%]
+    w-[96%]
+    items-center
+    justify-center 
+    bg-neutral-950
+    content-[''];
   }
-  .tile{
-    @apply
-    border p-6 hover:bg-blue-500/0
+  .tile {
+    @apply border border-neutral-500 p-6 hover:border-white hover:bg-blue-500/0;
   }
   .winning-tile {
-    @apply bg-emerald-500/40; 
+    @apply bg-emerald-500/40;
   }
-  
+
   .disabled-tile {
     @apply cursor-not-allowed;
   }
