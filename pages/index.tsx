@@ -92,7 +92,7 @@ export default function Home() {
             </div>
           ) : (
             <div
-              className={`text-5xl ${oswald.className} font-medium drop-shadow-[0_0_2px_rgba(255,255,255,0.2)]`}
+              className={`text-4xl ${oswald.className} font-semibold drop-shadow-[0_0_2px_rgba(255,255,255,0.2)]`}
             >
               {message}
             </div>
